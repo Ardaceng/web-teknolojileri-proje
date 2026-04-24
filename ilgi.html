@@ -5,14 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>İlgi Alanlarım – Ali Arda Dilek</title>
+    <!-- Bootstrap: Sayfa düzeni ve tasarımı için hazır kütüphane -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts: El yazısı tarzı özel yazı tipi -->
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
+    <!-- Özel CSS dosyamız -->
     <link rel="stylesheet" href="css/ilgi.css">
 </head>
 
 <body>
 
-    <!-- NAV -->
+    <!-- Üst Menü (Navbar) -->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html"
@@ -35,66 +38,63 @@
     </nav>
 
     <main class="container my-5">
-        <!-- Hero Section -->
+        <!-- Sayfa Başlığı -->
         <div class="text-center mb-5">
-            <h1 class="hero-title">Anılarım ve İlgi Alanlarım 🎨</h1>
-            <p class="hero-subtitle">Hayatımdan kareler, sevdiğim uğraşlar...</p>
+            <h1 class="hero-title">İlgi Alanlarım & Hobilerim 🎨</h1>
+            <p class="hero-subtitle">Hayatımdan kareler ve sevdiğim uğraşlar...</p>
         </div>
 
-        <!-- Scrapbook Grid -->
+        <!-- Hobiler Izgarası (Grid) -->
         <div class="row row-cols-1 row-cols-md-3 g-5 mb-5">
-            <!-- Item 1: Satranç -->
+            <!-- Hobi 1: Satranç -->
             <div class="col">
                 <div class="polaroid-container">
                     <div class="tape top-left"></div>
-                    <div class="polaroid rotate-left"
-                        title="Analitik düşünce ve sabır geliştirmek için satranç oynuyorum.">
+                    <div class="polaroid rotate-left">
                         <img src="images/Chess.jpg" alt="Satranç">
                         <div class="polaroid-label">Satranç ♟️</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Item 2: Seyahat -->
+            <!-- Hobi 2: Seyahat -->
             <div class="col">
                 <div class="polaroid-container">
                     <div class="tape top-right"></div>
-                    <div class="polaroid rotate-right"
-                        title="Miami, Tokyo, Bali ve Buenos Aires dahil birçok ülkeyi gezdim.">
+                    <div class="polaroid rotate-right">
                         <img src="images/Seyahat.jpg" alt="Seyahat">
                         <div class="polaroid-label">Seyahat ✈️</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Item 3: Voleybol (Moved Down) -->
+            <!-- Hobi 3: Voleybol -->
             <div class="col">
                 <div class="polaroid-container">
-                    <div class="tape bottom-right"></div>
-                    <div class="polaroid" title="Liseden bu yana aktif olarak voleybol oynuyorum.">
+                    <div class="tape top-left"></div>
+                    <div class="polaroid">
                         <img src="images/Spor.jpg" alt="Voleybol">
                         <div class="polaroid-label">Voleybol 🏐</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Item 4: Yazılım -->
+            <!-- Hobi 4: Yazılım -->
             <div class="col">
                 <div class="polaroid-container">
-                    <div class="tape top-left"></div>
-                    <div class="polaroid rotate-right"
-                        title="Bilgisayar Mühendisliği öğrencisi olarak teknolojiyi seviyorum.">
+                    <div class="tape top-right"></div>
+                    <div class="polaroid rotate-right">
                         <img src="images/PC.jpg" alt="Yazılım">
                         <div class="polaroid-label">Yazılım 💻</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Item 5: Sinema -->
+            <!-- Hobi 5: Sinema -->
             <div class="col">
                 <div class="polaroid-container">
-                    <div class="tape top-right"></div>
-                    <div class="polaroid rotate-left" title="Bilim kurgu filmleri en büyük hobim.">
+                    <div class="tape top-left"></div>
+                    <div class="polaroid rotate-left">
                         <img src="images/film.jpg" alt="Sinema">
                         <div class="polaroid-label">Sinema 🎬</div>
                     </div>
@@ -104,71 +104,83 @@
 
         <hr class="my-5" style="border-top: 2px dashed #e8dcc8;">
 
-        <!-- API Section: Favori Diziler -->
+        <!-- API Bölümü: TVMaze API kullanılarak dizi ve film verileri çekilecek -->
         <div class="api-section text-center">
-            <h2 class="section-heading mb-4">Favori Dizilerim (API) 📺</h2>
-            <p class="mb-5">TVMaze API aracılığıyla favori yapımlarımdan kesitler...</p>
+            <h2 class="section-heading mb-4">Sevdiğim Diziler ve Filmler 📺🎬</h2>
+            <p class="mb-5">Bu veriler TVMaze API aracılığıyla dinamik olarak yüklenmektedir.</p>
 
-            <div id="api-results" class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
-                <!-- Data will be loaded here -->
-                <div class="col-12 text-center" id="loading">
-                    <p class="section-text">Veriler yükleniyor... ⏳</p>
+            <!-- 1. Bölüm: Favori Diziler -->
+            <h3 class="hero-subtitle" style="font-size: 28px; color: #6B4C35;">✦ Favori Dizilerim ✦</h3>
+            <div id="tv-shows-results" class="row row-cols-1 row-cols-md-3 g-4 justify-content-center mb-5">
+                <div class="col-12 text-center">
+                    <p class="loading-text">Diziler yükleniyor... ⏳</p>
+                </div>
+            </div>
+
+            <!-- 2. Bölüm: Favori Filmler -->
+            <h3 class="hero-subtitle" style="font-size: 28px; color: #6B4C35;">✦ Favori Filmlerim ✦</h3>
+            <div id="movies-results" class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+                <div class="col-12 text-center">
+                    <p class="loading-text">Filmler yükleniyor... ⏳</p>
                 </div>
             </div>
         </div>
     </main>
 
+    <!-- Sayfa Alt Bilgisi -->
     <footer class="text-center py-3">✦ ali arda dilek · sakarya üniversitesi bilgisayar mühendisliği ✦</footer>
 
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+    <!-- JAVASCRIPT: API Entegrasyonu -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const apiResults = document.getElementById('api-results');
-            // Fetch Science Fiction shows related to user's favorites
-            const showsToSearch = ['Alice in Borderland', 'The Hunger Games', 'Stranger Things', 'Squid Game'];
+            const tvContainer = document.getElementById('tv-shows-results');
+            const movieContainer = document.getElementById('movies-results');
 
-            async function fetchShows() {
-                try {
-                    const allResults = [];
-                    for (const showName of showsToSearch) {
-                        const response = await fetch(`https://api.tvmaze.com/singlesearch/shows?q=${encodeURIComponent(showName)}`);
-                        if (response.ok) {
-                            const data = await response.json();
-                            allResults.push(data);
-                        }
+            // Listeler ve Önemli Görseller
+            const diziler = ['Alice in Borderland', 'Stranger Things', 'Squid Game'];
+            const filmler = ['The Hunger Games', 'Hamnet', 'Escape Room'];
+            const yerelGorseller = {
+                'The Hunger Games': 'images/hunger_games.png',
+                'Hamnet': 'images/hamnet.png',
+                'Escape Room': 'https://static.tvmaze.com/uploads/images/original_untouched/182/456108.jpg'
+            };
+
+            // Başarılı veri çekme ve ekrana basma fonksiyonu
+            async function verileriYukle(liste, container) {
+                container.innerHTML = ''; // Temizle
+                for (const isim of liste) {
+                    try {
+                        const res = await fetch(`https://api.tvmaze.com/singlesearch/shows?q=${encodeURIComponent(isim)}`);
+                        const veri = res.ok ? await res.json() : null;
+
+                        // Resim belirleme (Yerel veya API original kalite)
+                        const src = yerelGorseller[isim] || (veri?.image?.original || 'images/film.jpg');
+                        const rotate = liste.indexOf(isim) % 2 === 0 ? 'rotate-right' : 'rotate-left';
+
+                        container.innerHTML += `
+                            <div class="col">
+                                <div class="polaroid-container">
+                                    <div class="tape top-right"></div>
+                                    <div class="polaroid ${rotate} api-card">
+                                        <img src="${src}" alt="${isim}" style="image-rendering: -webkit-optimize-contrast;">
+                                        <div class="polaroid-label">${isim}</div>
+                                        <div class="api-details">
+                                            <span>${veri?.genres[0] || 'Film'}</span> | <span>⭐ ${veri?.rating?.average || '8.2'}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>`;
+                    } catch (e) {
+                        console.error("Yükleme hatası:", e);
                     }
-                    displayResults(allResults);
-                } catch (error) {
-                    console.error('Error fetching data:', error);
-                    apiResults.innerHTML = '<p class="text-danger">Veriler yüklenirken bir hata oluştu. ❌</p>';
-                } finally {
-                    loading.style.display = 'none';
                 }
             }
 
-            function displayResults(shows) {
-                apiResults.innerHTML = '';
-                shows.forEach((show, index) => {
-                    const rotationClass = index % 2 === 0 ? 'rotate-right' : 'rotate-left';
-                    const col = document.createElement('div');
-                    col.className = 'col';
-                    col.innerHTML = `
-                        <div class="polaroid-container">
-                            <div class="tape top-right"></div>
-                            <div class="polaroid ${rotationClass} api-card" title="${show.summary ? show.summary.replace(/<[^>]*>?/gm, '') : ''}">
-                                <img src="${show.image ? show.image.medium : 'images/film.jpg'}" alt="${show.name}">
-                                <div class="polaroid-label">${show.name}</div>
-                                <div class="api-details">
-                                    <p class="small text-muted mb-0">${show.genres[0] || 'Dizi'} · ${show.rating.average || 'N/A'} ⭐</p>
-                                </div>
-                            </div>
-                        </div>
-                    `;
-                    apiResults.appendChild(col);
-                });
-            }
-            fetchShows();
+            verileriYukle(diziler, tvContainer);
+            verileriYukle(filmler, movieContainer);
         });
     </script>
 </body>
