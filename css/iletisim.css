@@ -1,0 +1,111 @@
+body {
+    background: #FAF6F0;
+}
+
+.section-title {
+    font-family: 'Caveat', cursive;
+    font-size: 36px;
+    color: #6B4C35;
+    margin-bottom: 30px;
+}
+
+.contact-paper {
+    background: #fff;
+    padding: 40px;
+    border-radius: 2px;
+    box-shadow: 0 10px 30px rgba(107, 76, 53, 0.05);
+    border: 1px solid #e8dcc8;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Defter çizgisi görünümü (opsiyonel ama şık) */
+.contact-paper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 40px;
+    width: 2px;
+    height: 100%;
+    background: #f1e9db;
+}
+
+.form-label {
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+    color: #6B4C35;
+    margin-bottom: 5px;
+}
+
+.form-control,
+.form-select {
+    border: 1px solid #e8dcc8;
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-size: 15px;
+    background-color: #fdfcfb;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #6B4C35;
+    box-shadow: 0 0 0 0.25rem rgba(107, 76, 53, 0.1);
+    background-color: #fff;
+}
+
+.form-check-input:checked {
+    background-color: #6B4C35;
+    border-color: #6B4C35;
+}
+
+/* Custom Buttons */
+.btn-brown {
+    background-color: #6B4C35;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 25px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.btn-brown:hover {
+    background-color: #2C1F14;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-brown-outline {
+    border: 2px solid #6B4C35;
+    color: #6B4C35;
+    background: transparent;
+    padding: 8px 20px;
+    font-weight: 600;
+}
+
+.btn-brown-outline:hover {
+    background-color: #6B4C35;
+    color: white;
+}
+
+.btn-vue-outline {
+    border: 2px solid #42b883;
+    color: #42b883;
+    background: transparent;
+    padding: 8px 20px;
+    font-weight: 600;
+}
+
+.btn-vue-outline:hover {
+    background-color: #42b883;
+    color: white;
+}
+
+footer {
+    background: #e8dcc8;
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+    color: #6B4C35;
+    margin-top: 50px;
+}
