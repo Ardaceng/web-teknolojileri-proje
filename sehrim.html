@@ -133,63 +133,100 @@
             <span class="chip">🌅 Gün Batımı</span>
         </div>
 
-        <!-- Fotoğraf Galerisi -->
+        <!-- Fotoğraf Galerisi (Slider/Carousel) -->
         <h2 class="section-title">📸 Fotoğraf Galerisi</h2>
-        <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
-            <div class="col">
-                <div class="p-card">
-                    <img src="images/ist10.jpg" alt="İstanbul 1">
-                    <div class="p-label">Kadıköy 🎨</div>
+        <div id="cityCarousel" class="carousel slide mb-5 shadow-sm" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#cityCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#cityCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#cityCarousel" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#cityCarousel" data-bs-slide-to="3"></button>
+                <button type="button" data-bs-target="#cityCarousel" data-bs-slide-to="4"></button>
+                <button type="button" data-bs-target="#cityCarousel" data-bs-slide-to="5"></button>
+                <button type="button" data-bs-target="#cityCarousel" data-bs-slide-to="6"></button>
+                <button type="button" data-bs-target="#cityCarousel" data-bs-slide-to="7"></button>
+                <button type="button" data-bs-target="#cityCarousel" data-bs-slide-to="8"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="3000">
+                    <div class="carousel-img-container">
+                        <img src="images/ist10.jpg" alt="Kadıköy">
+                    </div>
+                    <div class="p-caption">
+                        <h5>Kadıköy 🎨</h5>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <div class="carousel-img-container">
+                        <img src="images/ist2.jpeg" alt="Dolmabahçe Sarayı">
+                    </div>
+                    <div class="p-caption">
+                        <h5>Dolmabahçe Sarayı 🏛️</h5>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <div class="carousel-img-container">
+                        <img src="images/ist3.jpeg" alt="Sent Antuan Kilisesi">
+                    </div>
+                    <div class="p-caption">
+                        <h5>Sent Antuan Kilisesi ⛪</h5>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <div class="carousel-img-container">
+                        <img src="images/ist4.jpeg" alt="Galata Kulesi">
+                    </div>
+                    <div class="p-caption">
+                        <h5>Galata Kulesi 🏰</h5>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <div class="carousel-img-container">
+                        <img src="images/ist5.jpeg" alt="Ayasofya Camii">
+                    </div>
+                    <div class="p-caption">
+                        <h5>Ayasofya Camii 🕌</h5>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <div class="carousel-img-container">
+                        <img src="images/ist6.jpeg" alt="Topkapı Sarayı">
+                    </div>
+                    <div class="p-caption">
+                        <h5>Topkapı Sarayı 🏰</h5>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <div class="carousel-img-container">
+                        <img src="images/ist7.jpeg" alt="taksim">
+                    </div>
+                    <div class="p-caption">
+                        <h5>Beyoğlu/Taksim 🗼</h5>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <div class="carousel-img-container">
+                        <img src="images/ist8.jpeg" alt="Akaretler">
+                    </div>
+                    <div class="p-caption">
+                        <h5>Akaretler 🌅</h5>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <div class="carousel-img-container">
+                        <img src="images/ist9.jpeg" alt="Kız Kulesi">
+                    </div>
+                    <div class="p-caption">
+                        <h5>Kız Kulesi ⛵</h5>
+                    </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="p-card">
-                    <img src="images/ist2.jpeg" alt="İstanbul 2">
-                    <div class="p-label">Dolmabahçe Sarayı 🏛 ️</div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="p-card">
-                    <img src="images/ist3.jpeg" alt="İstanbul 3">
-                    <div class="p-label">Sent Antuan Kilisesi ⛪</div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="p-card">
-                    <img src="images/ist4.jpeg" alt="İstanbul 4">
-                    <div class="p-label">Galata Kulesi 🏰</div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="p-card">
-                    <img src="images/ist5.jpeg" alt="İstanbul 5">
-                    <div class="p-label">Ayasofya Camii 🕌</div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="p-card">
-                    <img src="images/ist6.jpeg" alt="İstanbul 6">
-                    <div class="p-label">Topkapı Sarayı🏰</div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="p-card">
-                    <img src="images/ist7.jpeg" alt="İstanbul 7">
-                    <div class="p-label">Beyoğlu/Taksim 🗼</div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="p-card">
-                    <img src="images/ist8.jpeg" alt="İstanbul 8">
-                    <div class="p-label">Akaretler 🌅</div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="p-card">
-                    <img src="images/ist9.jpeg" alt="İstanbul 9">
-                    <div class="p-label">Kız Kulesi ⛵</div>
-                </div>
-            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#cityCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#cityCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
         </div>
 
     </main>

@@ -45,101 +45,80 @@
         </div>
 
         <!-- Hobiler Izgarası (Grid) -->
-        <div class="row row-cols-1 row-cols-md-3 g-5 mb-5">
+        <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
             <!-- Hobi 1: Satranç -->
             <div class="col">
-                <div class="polaroid-container">
-                    <div class="tape top-left"></div>
-                    <div class="polaroid rotate-left">
-                        <img src="images/Chess.jpg" alt="Satranç">
-                        <div class="polaroid-label">Satranç ♟️</div>
-                    </div>
+                <div class="polaroid">
+                    <img src="images/Chess.jpg" alt="Satranç">
+                    <div class="polaroid-label">Satranç ♟️</div>
                 </div>
             </div>
 
             <!-- Hobi 2: Seyahat -->
             <div class="col">
-                <div class="polaroid-container">
-                    <div class="tape top-right"></div>
-                    <div class="polaroid rotate-right">
-                        <img src="images/Seyahat.jpg" alt="Seyahat">
-                        <div class="polaroid-label">Seyahat ✈️</div>
-                    </div>
+                <div class="polaroid">
+                    <img src="images/Seyahat.jpg" alt="Seyahat">
+                    <div class="polaroid-label">Seyahat ✈️</div>
                 </div>
             </div>
 
             <!-- Hobi 3: Voleybol -->
             <div class="col">
-                <div class="polaroid-container">
-                    <div class="tape top-left"></div>
-                    <div class="polaroid">
-                        <img src="images/Spor.jpg" alt="Voleybol">
-                        <div class="polaroid-label">Voleybol 🏐</div>
-                    </div>
+                <div class="polaroid">
+                    <img src="images/Spor.jpg" alt="Voleybol">
+                    <div class="polaroid-label">Voleybol 🏐</div>
                 </div>
             </div>
 
             <!-- Hobi 4: Yazılım -->
             <div class="col">
-                <div class="polaroid-container">
-                    <div class="tape top-right"></div>
-                    <div class="polaroid rotate-right">
-                        <img src="images/PC.jpg" alt="Yazılım">
-                        <div class="polaroid-label">Yazılım 💻</div>
-                    </div>
+                <div class="polaroid">
+                    <img src="images/PC.jpg" alt="Yazılım">
+                    <div class="polaroid-label">Yazılım 💻</div>
                 </div>
             </div>
 
             <!-- Hobi 5: Sinema -->
             <div class="col">
-                <div class="polaroid-container">
-                    <div class="tape top-left"></div>
-                    <div class="polaroid rotate-left">
-                        <img src="images/film.jpg" alt="Sinema">
-                        <div class="polaroid-label">Sinema 🎬</div>
-                    </div>
+                <div class="polaroid">
+                    <img src="images/film.jpg" alt="Sinema">
+                    <div class="polaroid-label">Sinema 🎬</div>
                 </div>
             </div>
         </div>
 
-        <hr class="my-5" style="border-top: 2px dashed #e8dcc8;">
+        <hr class="my-5" style="border-top: 1px solid #e8dcc8;">
 
-        <!-- API Bölümü: TVMaze API kullanılarak dizi ve film verileri çekilecek -->
+        <!-- API Bölümü -->
         <div class="api-section text-center">
             <h2 class="section-heading mb-4">Sevdiğim Diziler ve Filmler 📺🎬</h2>
             <p class="mb-5">Bu veriler TVMaze API aracılığıyla dinamik olarak yüklenmektedir.</p>
 
-            <!-- 1. Bölüm: Favori Diziler -->
-            <h3 class="hero-subtitle" style="font-size: 28px; color: #6B4C35;">✦ Favori Dizilerim ✦</h3>
+            <h3 class="hero-subtitle">✦ Favori Dizilerim ✦</h3>
             <div id="tv-shows-results" class="row row-cols-1 row-cols-md-3 g-4 justify-content-center mb-5">
-                <div class="col-12 text-center">
-                    <p class="loading-text">Diziler yükleniyor... ⏳</p>
+                <div class="col-12">
+                    <p>Diziler yükleniyor... ⏳</p>
                 </div>
             </div>
 
-            <!-- 2. Bölüm: Favori Filmler -->
-            <h3 class="hero-subtitle" style="font-size: 28px; color: #6B4C35;">✦ Favori Filmlerim ✦</h3>
+            <h3 class="hero-subtitle">✦ Favori Filmlerim ✦</h3>
             <div id="movies-results" class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
-                <div class="col-12 text-center">
-                    <p class="loading-text">Filmler yükleniyor... ⏳</p>
+                <div class="col-12">
+                    <p>Filmler yükleniyor... ⏳</p>
                 </div>
             </div>
         </div>
     </main>
 
-    <!-- Sayfa Alt Bilgisi -->
     <footer class="text-center py-3">✦ ali arda dilek · sakarya üniversitesi bilgisayar mühendisliği ✦</footer>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- JAVASCRIPT: API Entegrasyonu -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const tvContainer = document.getElementById('tv-shows-results');
             const movieContainer = document.getElementById('movies-results');
 
-            // Listeler ve Önemli Görseller
             const diziler = ['Alice in Borderland', 'Stranger Things', 'Squid Game'];
             const filmler = ['The Hunger Games', 'Hamnet', 'Escape Room'];
             const yerelGorseller = {
@@ -148,37 +127,27 @@
                 'Escape Room': 'https://static.tvmaze.com/uploads/images/original_untouched/182/456108.jpg'
             };
 
-            // Başarılı veri çekme ve ekrana basma fonksiyonu
             async function verileriYukle(liste, container) {
-                container.innerHTML = ''; // Temizle
+                container.innerHTML = '';
                 for (const isim of liste) {
                     try {
                         const res = await fetch(`https://api.tvmaze.com/singlesearch/shows?q=${encodeURIComponent(isim)}`);
                         const veri = res.ok ? await res.json() : null;
-
-                        // Resim belirleme (Yerel veya API original kalite)
                         const src = yerelGorseller[isim] || (veri?.image?.original || 'images/film.jpg');
-                        const rotate = liste.indexOf(isim) % 2 === 0 ? 'rotate-right' : 'rotate-left';
 
                         container.innerHTML += `
                             <div class="col">
-                                <div class="polaroid-container">
-                                    <div class="tape top-right"></div>
-                                    <div class="polaroid ${rotate} api-card">
-                                        <img src="${src}" alt="${isim}" style="image-rendering: -webkit-optimize-contrast;">
-                                        <div class="polaroid-label">${isim}</div>
-                                        <div class="api-details">
-                                            <span>${veri?.genres[0] || 'Film'}</span> | <span>⭐ ${veri?.rating?.average || '8.2'}</span>
-                                        </div>
+                                <div class="polaroid">
+                                    <img src="${src}" alt="${isim}">
+                                    <div class="polaroid-label">${isim}</div>
+                                    <div class="api-details">
+                                        <span>${veri?.genres[0] || 'Film'}</span> | <span>⭐ ${veri?.rating?.average || '8.2'}</span>
                                     </div>
                                 </div>
                             </div>`;
-                    } catch (e) {
-                        console.error("Yükleme hatası:", e);
-                    }
+                    } catch (e) { console.error(e); }
                 }
             }
-
             verileriYukle(diziler, tvContainer);
             verileriYukle(filmler, movieContainer);
         });

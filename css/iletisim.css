@@ -12,45 +12,39 @@ body {
 .contact-paper {
     background: #fff;
     padding: 40px;
-    border-radius: 2px;
-    box-shadow: 0 10px 30px rgba(107, 76, 53, 0.05);
-    border: 1px solid #e8dcc8;
+    border-radius: 8px;
+    /* Daha yumuşak köşeler */
+    box-shadow: 0 5px 20px rgba(107, 76, 53, 0.08);
+    /* Daha hafif gölge */
+    border: 1px solid #f1ece4;
+    /* Daha silik çerçeve */
     position: relative;
     overflow: hidden;
 }
 
-/* Defter çizgisi görünümü (opsiyonel ama şık) */
-.contact-paper::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 40px;
-    width: 2px;
-    height: 100%;
-    background: #f1e9db;
-}
+/* Defter çizgisi kaldırıldı - Sade tasarım */
 
 .form-label {
     font-family: 'Caveat', cursive;
-    font-size: 20px;
+    font-size: 19px;
     color: #6B4C35;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
 }
 
 .form-control,
 .form-select {
-    border: 1px solid #e8dcc8;
-    border-radius: 4px;
-    padding: 10px 15px;
-    font-size: 15px;
-    background-color: #fdfcfb;
-    transition: all 0.3s ease;
+    border: 1px solid #efe9e1;
+    border-radius: 6px;
+    padding: 12px 15px;
+    font-size: 14px;
+    background-color: #fafaf8;
+    transition: all 0.2s ease;
 }
 
 .form-control:focus,
 .form-select:focus {
     border-color: #6B4C35;
-    box-shadow: 0 0 0 0.25rem rgba(107, 76, 53, 0.1);
+    box-shadow: none;
     background-color: #fff;
 }
 
@@ -59,29 +53,29 @@ body {
     border-color: #6B4C35;
 }
 
-/* Custom Buttons */
+/* Custom Buttons - Daha Sade */
 .btn-brown {
     background-color: #6B4C35;
     color: white;
     border: none;
-    border-radius: 4px;
-    padding: 10px 25px;
-    font-size: 16px;
-    transition: all 0.3s ease;
+    border-radius: 6px;
+    padding: 10px 30px;
+    font-size: 15px;
+    font-weight: 500;
 }
 
 .btn-brown:hover {
-    background-color: #2C1F14;
+    background-color: #553b2a;
     color: white;
-    transform: translateY(-2px);
 }
 
 .btn-brown-outline {
-    border: 2px solid #6B4C35;
+    border: 1px solid #6B4C35;
     color: #6B4C35;
     background: transparent;
     padding: 8px 20px;
-    font-weight: 600;
+    border-radius: 6px;
+    transition: 0.3s;
 }
 
 .btn-brown-outline:hover {
@@ -90,11 +84,12 @@ body {
 }
 
 .btn-vue-outline {
-    border: 2px solid #42b883;
+    border: 1px solid #42b883;
     color: #42b883;
     background: transparent;
     padding: 8px 20px;
-    font-weight: 600;
+    border-radius: 6px;
+    transition: 0.3s;
 }
 
 .btn-vue-outline:hover {
