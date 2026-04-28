@@ -1,49 +1,41 @@
+// validation.js — Vanilla JS Form Kontrolü
+
 function vanillaCheck() {
-    // Form elemanlarını al
-    const ad = document.getElementById('ad').value;
-    const email = document.getElementById('email').value;
-    const tel = document.getElementById('tel').value;
+    const ad = document.getElementById('ad').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const tel = document.getElementById('tel').value.trim();
     const konu = document.getElementById('konu').value;
-    const mesaj = document.getElementById('mesaj').value;
-
-    // Cinsiyet kontrolü
+    const mesaj = document.getElementById('mesaj').value.trim();
     const cinsiyet = document.querySelector('input[name="cinsiyet"]:checked');
+    const ilgiSecili = document.querySelectorAll('input[name="ilgi[]"]:checked');
 
-    // İlgi alanları kontrolü
-    const ilgiAlanlari = document.querySelectorAll('input[name="ilgi[]"]:checked');
+    let hatalar = [];
 
-    // Hata mesajlarını topla
-    let errors = [];
+    // Ad: boş olamaz, sadece harf
+    if (ad === "")
+        hatalar.push("Ad Soyad boş bırakılamaz.");
+    else if (!/^[a-zA-ZğüşıöçĞÜŞİÖÇ\s]+$/.test(ad))
+        hatalar.push("Ad Soyad sadece harf içermelidir.");
 
-    if (ad.trim() === "") errors.push("Ad Soyad alanı boş bırakılamaz.");
-    if (email.trim() === "") {
-        errors.push("E-posta alanı boş bırakılamaz.");
-    } else {
-        // Basit email regex
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-            errors.push("Geçersiz e-posta formatı.");
-        }
-    }
+    // E-posta: boş olamaz, geçerli format
+    if (email === "")
+        hatalar.push("E-posta boş bırakılamaz.");
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
+        hatalar.push("Geçersiz e-posta formatı. (örn: ad@mail.com)");
 
-    if (tel.trim() === "") {
-        errors.push("Telefon alanı boş bırakılamaz.");
-    } else {
-        // Sadece rakam kontrolü
-        if (!/^\d+$/.test(tel.replace(/\s/g, ""))) {
-            errors.push("Telefon numarası sadece rakamlardan oluşmalıdır.");
-        }
-    }
+    // Telefon: boş olamaz, sadece rakam
+    if (tel === "")
+        hatalar.push("Telefon boş bırakılamaz.");
+    else if (!/^\d+$/.test(tel.replace(/\s/g, "")))
+        hatalar.push("Telefon sadece rakamlardan oluşmalıdır.");
 
-    if (!konu) errors.push("Lütfen bir konu seçin.");
-    if (!cinsiyet) errors.push("Lütfen cinsiyet seçin.");
-    if (ilgiAlanlari.length === 0) errors.push("En az bir ilgi alanı seçmelisiniz.");
-    if (mesaj.trim() === "") errors.push("Mesaj alanı boş bırakılamaz.");
+    if (!konu) hatalar.push("Lütfen bir konu seçin.");
+    if (!cinsiyet) hatalar.push("Lütfen cinsiyet seçin.");
+    if (ilgiSecili.length === 0) hatalar.push("En az bir ilgi alanı seçin.");
+    if (mesaj === "") hatalar.push("Mesaj boş bırakılamaz.");
 
-    // Sonucu göster
-    if (errors.length > 0) {
-        alert("Vanilla JS Hatası:\n- " + errors.join("\n- "));
-    } else {
-        alert("Vanilla JS Kontrolü: Form başarıyla doğrulandı! ✅");
-    }
+    if (hatalar.length > 0)
+        alert("⚠️ Hatalar:\n\n• " + hatalar.join("\n• "));
+    else
+        alert("✅ Vanilla JS: Form başarıyla doğrulandı!");
 }

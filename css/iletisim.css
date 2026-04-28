@@ -1,106 +1,160 @@
+/* iletisim.css */
+
 body {
-    background: #FAF6F0;
+    background-color: #FAF6F0;
+    font-family: 'Inter', sans-serif;
 }
 
-.section-title {
+/* Navbar */
+.navbar-brand {
     font-family: 'Caveat', cursive;
-    font-size: 36px;
+    font-size: 24px;
     color: #6B4C35;
-    margin-bottom: 30px;
+    font-weight: 600;
 }
 
-.contact-paper {
-    background: #fff;
-    padding: 40px;
-    border-radius: 8px;
-    /* Daha yumuşak köşeler */
-    box-shadow: 0 5px 20px rgba(107, 76, 53, 0.08);
-    /* Daha hafif gölge */
-    border: 1px solid #f1ece4;
-    /* Daha silik çerçeve */
-    position: relative;
-    overflow: hidden;
+.nav-link {
+    color: #6B4C35 !important;
+    font-weight: 500;
+    transition: opacity 0.2s;
 }
 
-/* Defter çizgisi kaldırıldı - Sade tasarım */
+.nav-link:hover,
+.nav-link.active {
+    opacity: 0.65;
+}
 
-.form-label {
+/* Başlık */
+.page-title {
     font-family: 'Caveat', cursive;
-    font-size: 19px;
+    font-size: 42px;
     color: #6B4C35;
     margin-bottom: 6px;
 }
 
-.form-control,
-.form-select {
-    border: 1px solid #efe9e1;
-    border-radius: 6px;
-    padding: 12px 15px;
+.page-subtitle {
     font-size: 14px;
-    background-color: #fafaf8;
-    transition: all 0.2s ease;
+    color: #9e8570;
+    margin-bottom: 30px;
 }
 
-.form-control:focus,
-.form-select:focus {
+/* Form kartı */
+.form-card {
+    background: #fff;
+    border: 1px solid #ede5d8;
+    border-radius: 12px;
+    padding: 40px 36px;
+    box-shadow: 0 4px 24px rgba(107, 76, 53, 0.08);
+}
+
+/* Label */
+.field-label {
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+    color: #6B4C35;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Input, Textarea, Select */
+.field-input {
+    width: 100%;
+    border: 1px solid #e2d8cc;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 14px;
+    background-color: #fdfaf7;
+    color: #444;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    appearance: auto;
+}
+
+.field-input:focus {
     border-color: #6B4C35;
-    box-shadow: none;
-    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(107, 76, 53, 0.1);
+    background: #fff;
 }
 
+/* Checkbox & Radio */
 .form-check-input:checked {
     background-color: #6B4C35;
     border-color: #6B4C35;
 }
 
-/* Custom Buttons - Daha Sade */
-.btn-brown {
+.form-check-label {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Butonlar */
+.btn-send {
     background-color: #6B4C35;
-    color: white;
+    color: #fff;
     border: none;
-    border-radius: 6px;
-    padding: 10px 30px;
+    border-radius: 8px;
+    padding: 10px 28px;
     font-size: 15px;
-    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
 }
 
-.btn-brown:hover {
+.btn-send:hover {
     background-color: #553b2a;
-    color: white;
 }
 
-.btn-brown-outline {
-    border: 1px solid #6B4C35;
+.btn-vanilla {
+    border: 1.5px solid #6B4C35;
     color: #6B4C35;
     background: transparent;
-    padding: 8px 20px;
-    border-radius: 6px;
-    transition: 0.3s;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
 }
 
-.btn-brown-outline:hover {
+.btn-vanilla:hover {
     background-color: #6B4C35;
-    color: white;
+    color: #fff;
 }
 
-.btn-vue-outline {
-    border: 1px solid #42b883;
+.btn-vue {
+    border: 1.5px solid #42b883;
     color: #42b883;
     background: transparent;
-    padding: 8px 20px;
-    border-radius: 6px;
-    transition: 0.3s;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
 }
 
-.btn-vue-outline:hover {
+.btn-vue:hover {
     background-color: #42b883;
-    color: white;
+    color: #fff;
 }
 
+.btn-reset {
+    border: 1.5px solid #ccc;
+    color: #777;
+    background: transparent;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-reset:hover {
+    background-color: #f0f0f0;
+}
+
+/* Footer */
 footer {
-    background: #e8dcc8;
     font-family: 'Caveat', cursive;
     font-size: 20px;
     color: #6B4C35;
-    margin-top: 50px;
+    background-color: #e8dcc8;
+    margin-top: 60px;
 }
