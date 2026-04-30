@@ -62,7 +62,8 @@ nav {
 }
 
 footer {
-    background: #e8dcc8;
+    background: #fff;
+    border-top: 1px solid #e8dcc8;
     padding: 20px 0;
     font-family: 'Caveat', cursive;
     font-size: 20px;
