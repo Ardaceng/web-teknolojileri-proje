@@ -50,26 +50,28 @@
                         <!-- Ad Soyad -->
                         <div class="mb-3">
                             <label for="ad" class="field-label">Adınız Soyadınız</label>
-                            <input type="text" class="field-input" id="ad" name="ad" placeholder="Ali Arda Dilek">
+                            <input type="text" class="field-input" id="ad" name="ad" placeholder="Ali Arda Dilek"
+                                pattern="[a-zA-ZğüşıöçĞÜŞİÖÇ\s]+" title="Sadece harf içermelidir" required>
                         </div>
 
                         <!-- E-posta -->
                         <div class="mb-3">
                             <label for="email" class="field-label">E-posta Adresiniz</label>
-                            <input type="email" class="field-input" id="email" name="email"
-                                placeholder="ornek@mail.com">
+                            <input type="email" class="field-input" id="email" name="email" placeholder="ornek@mail.com"
+                                required>
                         </div>
 
                         <!-- Telefon -->
                         <div class="mb-3">
                             <label for="tel" class="field-label">Telefon Numaranız</label>
-                            <input type="tel" class="field-input" id="tel" name="tel" placeholder="05XX XXX XX XX">
+                            <input type="tel" class="field-input" id="tel" name="tel" placeholder="05XX XXX XX XX"
+                                pattern="[0-9\s]+" title="Sadece rakamlar olmalıdır" required>
                         </div>
 
                         <!-- Konu -->
                         <div class="mb-3">
                             <label for="konu" class="field-label">Konu</label>
-                            <select class="field-input" id="konu" name="konu">
+                            <select class="field-input" id="konu" name="konu" required>
                                 <option value="" selected disabled>Bir konu seçin...</option>
                                 <option value="Genel">Genel İletişim</option>
                                 <option value="Geri Bildirim">Geri Bildirim</option>
@@ -119,8 +121,8 @@
                         <!-- Mesaj -->
                         <div class="mb-4">
                             <label for="mesaj" class="field-label">Mesajınız</label>
-                            <textarea class="field-input" id="mesaj" name="mesaj" rows="4"
-                                placeholder="Buraya yazın..."></textarea>
+                            <textarea class="field-input" id="mesaj" name="mesaj" rows="4" placeholder="Buraya yazın..."
+                                required></textarea>
                         </div>
 
                         <!-- Butonlar -->
