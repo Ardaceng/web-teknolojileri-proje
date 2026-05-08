@@ -81,7 +81,7 @@
     <nav class="navbar bg-white border-bottom">
         <div class="container">
             <a class="navbar-brand" href="../index.html"
-                style="font-family:'Caveat',cursive; font-size:24px; color:#6B4C35;">arda ✦</a>
+                style="font-family:'Caveat',cursive; font-size:24px; color:#6B4C35;">arda</a>
         </div>
     </nav>
 
@@ -127,7 +127,7 @@
         ?>
     </div>
 
-    <footer>✦ ali arda dilek · sakarya üniversitesi bilgisayar mühendisliği ✦</footer>
+    <footer>ali arda dilek · sakarya üniversitesi bilgisayar mühendisliği</footer>
 
 </body>
 
