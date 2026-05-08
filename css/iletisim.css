@@ -6,13 +6,6 @@ body {
 }
 
 /* Navbar */
-.navbar-brand {
-    font-family: 'Caveat', cursive;
-    font-size: 24px;
-    color: #6B4C35;
-    font-weight: 600;
-}
-
 .nav-link {
     color: #6B4C35 !important;
     font-weight: 500;
@@ -148,6 +141,31 @@ body {
 
 .btn-reset:hover {
     background-color: #f0f0f0;
+}
+
+/* Sonuç Kutusu */
+.sonuc-kutu {
+    border-radius: 10px;
+    padding: 18px 22px;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.sonuc-kutu.basarili {
+    background-color: #f0faf4;
+    border: 1.5px solid #42b883;
+    color: #2d7a5e;
+}
+
+.sonuc-kutu.hata {
+    background-color: #fff5f5;
+    border: 1.5px solid #e57373;
+    color: #b33a3a;
+}
+
+.sonuc-kutu ul {
+    margin: 8px 0 0;
+    padding-left: 20px;
 }
 
 /* Footer */

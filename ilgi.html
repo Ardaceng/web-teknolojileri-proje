@@ -19,8 +19,8 @@
     <!-- Üst Menü (Navbar) -->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html"
-                style="font-family:'Caveat',cursive; font-size:24px; color:#6B4C35;">arda ✦</a>
+            <a class="navbar-brand" href="index.html"
+                style="font-family: 'Caveat', cursive; font-size: 2.5rem; color: #6B4C35 !important; font-weight: 700; padding: 0;">arda</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -39,74 +39,43 @@
     </nav>
 
     <main class="container my-5">
-        <!-- Sayfa Başlığı -->
-        <div class="text-center mb-5">
-            <h1 class="hero-title">İlgi Alanlarım & Hobilerim 🎨</h1>
-            <p class="hero-subtitle">Hayatımdan kareler ve sevdiğim uğraşlar...</p>
-        </div>
 
-        <!-- Hobiler Izgarası (Grid) -->
-        <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
-            <!-- Hobi 1: Satranç -->
-            <div class="col">
-                <div class="polaroid">
-                    <img src="images/Chess.jpg" alt="Satranç">
-                    <div class="polaroid-label">Satranç ♟️</div>
-                </div>
+
+        <!-- API Bölümü (Arama Motoru) -->
+        <div class="api-section mt-3" style="background-color: #EFEFEF; padding: 40px 50px; border-radius: 8px;">
+            <h2 class="mb-3"
+                style="font-family: 'Inter', sans-serif; font-weight: 700; color: #4A342C; font-size: 36px; text-align: left; letter-spacing: -0.5px;">
+                Dizi & Film Keşfet</h2>
+            <p class="mb-4" style="text-align: left; color: #666; font-family: 'Inter', sans-serif; font-size: 16px;">
+                İzlemek istediğin bir diziyi veya filmi arat, anında bilgi al.</p>
+
+            <!-- Arama Çubuğu  -->
+            <div class="input-group shadow-sm mb-5" style="height: 60px; border-radius: 6px; overflow: hidden;">
+                <input type="text" id="searchInput" class="form-control" placeholder="Örn: Breaking Bad, Batman..."
+                    style="font-family: 'Inter', sans-serif; border: none; background-color: #FFFFFF; font-size: 16px; padding-left: 20px; box-shadow: none;">
+                <button id="searchButton" class="btn"
+                    style="background-color: #333333; color: white; width: 90px; border: none; display: flex; flex-direction: column; justify-content: center; align-items: center; cursor: pointer;">
+                    <span style="font-size: 16px; line-height: 1; margin-bottom: 3px;">🔍</span>
+                    <span style="font-size: 14px; font-family: 'Inter', sans-serif;">Ara</span>
+                </button>
             </div>
 
-            <!-- Hobi 2: Seyahat -->
-            <div class="col">
-                <div class="polaroid">
-                    <img src="images/Seyahat.jpg" alt="Seyahat">
-                    <div class="polaroid-label">Seyahat ✈️</div>
-                </div>
-            </div>
-
-            <!-- Hobi 3: Voleybol -->
-            <div class="col">
-                <div class="polaroid">
-                    <img src="images/Spor.jpg" alt="Voleybol">
-                    <div class="polaroid-label">Voleybol 🏐</div>
-                </div>
-            </div>
-
-            <!-- Hobi 4: Yazılım -->
-            <div class="col">
-                <div class="polaroid">
-                    <img src="images/PC.jpg" alt="Yazılım">
-                    <div class="polaroid-label">Yazılım 💻</div>
-                </div>
-            </div>
-
-            <!-- Hobi 5: Sinema -->
-            <div class="col">
-                <div class="polaroid">
-                    <img src="images/film.jpg" alt="Sinema">
-                    <div class="polaroid-label">Sinema 🎬</div>
-                </div>
+            <h3 class="hero-subtitle d-none text-center" id="resultsTitle">Arama Sonuçları</h3>
+            <!-- Sonuçların Geleceği Kutu -->
+            <div id="searchResults" class="row row-cols-1 row-cols-md-3 g-4 justify-content-center mb-2">
             </div>
         </div>
 
-        <hr class="my-5" style="border-top: 1px solid #e8dcc8;">
-
-        <!-- API Bölümü -->
-        <div class="api-section text-center">
-            <h2 class="section-heading mb-4">Sevdiğim Diziler ve Filmler 📺🎬</h2>
-            <p class="mb-5">Bu veriler TVMaze API aracılığıyla dinamik olarak yüklenmektedir.</p>
-
-            <h3 class="hero-subtitle">✦ Favori Dizilerim ✦</h3>
-            <div id="tv-shows-results" class="row row-cols-1 row-cols-md-3 g-4 justify-content-center mb-5">
-                <div class="col-12">
-                    <p>Diziler yükleniyor... ⏳</p>
-                </div>
+        <!-- Siyah Alt Bant  -->
+        <div class="mt-4" style="background-color: #1A1A1A; padding: 25px 0; border-radius: 8px; text-align: center;">
+            <div style="font-size: 24px; color: #b3b3b3; margin-bottom: 5px;">
+                <span class="mx-3" style="cursor:pointer;" title="Github">🐱</span>
+                <span class="mx-3" style="cursor:pointer;" title="Instagram">📷</span>
+                <span class="mx-3" style="cursor:pointer;" title="Email">✉️</span>
+                <span class="mx-3" style="cursor:pointer;" title="LinkedIn">💼</span>
             </div>
-
-            <h3 class="hero-subtitle">✦ Favori Filmlerim ✦</h3>
-            <div id="movies-results" class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
-                <div class="col-12">
-                    <p>Filmler yükleniyor... ⏳</p>
-                </div>
+            <div style="color: #666; font-size: 12px; font-family: 'Inter', sans-serif;">
+                © 2026 Ali Arda Dilek
             </div>
         </div>
     </main>
@@ -116,41 +85,77 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
+        // 1) Sayfa tamamen yüklendikten sonra kodların çalışmasını sağlar
         document.addEventListener('DOMContentLoaded', () => {
-            const tvContainer = document.getElementById('tv-shows-results');
-            const movieContainer = document.getElementById('movies-results');
+            const btnAra = document.getElementById('searchButton');
+            const kutuArama = document.getElementById('searchInput');
+            const sonucKutusu = document.getElementById('searchResults');
+            const sonucBasligi = document.getElementById('resultsTitle');
 
-            const diziler = ['Alice in Borderland', 'Stranger Things', 'Squid Game'];
-            const filmler = ['The Hunger Games', 'Hamnet', 'Escape Room'];
-            const yerelGorseller = {
-                'The Hunger Games': 'images/hunger_games.png',
-                'Hamnet': 'images/hamnet.png',
-                'Escape Room': 'https://static.tvmaze.com/uploads/images/original_untouched/182/456108.jpg'
-            };
+            // 2) 'Ara' butonuna tıklandığında çalışacak olan işlem
+            btnAra.addEventListener('click', async () => {
+                const arananKelime = kutuArama.value.trim(); // Baştaki ve sondaki boşlukları temizler
 
-            async function verileriYukle(liste, container) {
-                container.innerHTML = '';
-                for (const isim of liste) {
-                    try {
-                        const res = await fetch(`https://api.tvmaze.com/singlesearch/shows?q=${encodeURIComponent(isim)}`);
-                        const veri = res.ok ? await res.json() : null;
-                        const src = yerelGorseller[isim] || (veri?.image?.original || 'images/film.jpg');
+                // Eğer kutu boşken butona basılırsa hiçbir şey yapmasın
+                if (!arananKelime) return;
 
-                        container.innerHTML += `
+                // Arama sonuçları başlığını göster ve yükleniyor animasyonu ekle
+                sonucBasligi.classList.remove('d-none');
+                sonucKutusu.innerHTML = '<p style="font-family: Caveat, cursive; font-size: 24px;">Aranıyor... ⏳</p>';
+
+                try {
+                    // 3) TVMaze API'ye (Sunucuya) istek (request) atıyoruz
+                    const response = await fetch(`https://api.tvmaze.com/search/shows?q=${arananKelime}`);
+                    const veriler = await response.json(); // Gelen cevabı JSON formatına (anlamlı listeye) çevir
+
+                    sonucKutusu.innerHTML = ''; // Eski sonuçları ekrandan temizle
+
+                    // Gelen sonuçlardan sadece ilk 3 tanesini al (ekran çok dolmasın diye)
+                    const ilkUcSonuc = veriler.slice(0, 3);
+
+                    // Eğer hiç sonuç bulunamazsa kullanıcıya uyarı ver
+                    if (ilkUcSonuc.length === 0) {
+                        sonucKutusu.innerHTML = '<p style="font-family: Caveat, cursive; font-size: 24px;">Arama sonucu bulunamadı 😢</p>';
+                        return;
+                    }
+
+                    // 4) Bulunan her bir dizi/film için ekranda bir "Polaroid Kadrajı" oluştur
+                    for (const oge of ilkUcSonuc) {
+                        const dizi = oge.show; // Gelen listedeki dizi objesini al
+
+                        // Eğer dizinin resmi varsa onu kullan, yoksa kendi default resmimizi koy
+                        const resim = dizi.image ? dizi.image.medium : 'images/film.jpg';
+                        // Puanı varsa göster, yoksa "?" koy
+                        const puan = dizi.rating?.average || '?';
+                        // Tür bilgisi varsa ilkini al (Drama, Action vs.), yoksa Belirtilmemiş yaz
+                        const tur = dizi.genres[0] || 'Tür Belirtilmemiş';
+
+                        // Ekrana (HTML içine) oluşturduğumuz kartı ekle
+                        sonucKutusu.innerHTML += `
                             <div class="col">
                                 <div class="polaroid">
-                                    <img src="${src}" alt="${isim}">
-                                    <div class="polaroid-label">${isim}</div>
+                                    <img src="${resim}" alt="${dizi.name}">
+                                    <div class="polaroid-label">${dizi.name}</div>
                                     <div class="api-details">
-                                        <span>${veri?.genres[0] || 'Film'}</span> | <span>⭐ ${veri?.rating?.average || '8.2'}</span>
+                                        <span>${tur}</span> | <span>⭐ ${puan}</span>
                                     </div>
                                 </div>
-                            </div>`;
-                    } catch (e) { console.error(e); }
+                            </div>
+                        `;
+                    }
+                } catch (hata) {
+                    // Eğer internet yoksa veya API çökmüşse, program bozulmasın diye hatayı yakala
+                    sonucKutusu.innerHTML = '<p style="font-family: Caveat, cursive; font-size: 24px;">Bağlantı hatası oluştu. Lütfen tekrar deneyin. 🛑</p>';
+                    console.error("TVMaze API Hatası:", hata);
                 }
-            }
-            verileriYukle(diziler, tvContainer);
-            verileriYukle(filmler, movieContainer);
+            });
+
+            // Kullanıcı Enter tuşuna basınca da "Ara" butonuna tıklanmış gibi tetikle
+            kutuArama.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    btnAra.click();
+                }
+            });
         });
     </script>
 </body>

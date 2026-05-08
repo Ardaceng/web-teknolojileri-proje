@@ -18,7 +18,8 @@
     <!-- NAV -->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="index.html">arda ✦</a>
+            <a class="navbar-brand" href="index.html"
+                style="font-family: 'Caveat', cursive; font-size: 2.5rem; color: #6B4C35 !important; font-weight: 700; padding: 0;">arda</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -50,28 +51,26 @@
                         <!-- Ad Soyad -->
                         <div class="mb-3">
                             <label for="ad" class="field-label">Adınız Soyadınız</label>
-                            <input type="text" class="field-input" id="ad" name="ad" placeholder="Ali Arda Dilek"
-                                pattern="[a-zA-ZğüşıöçĞÜŞİÖÇ\s]+" title="Sadece harf içermelidir" required>
+                            <input type="text" class="field-input" id="ad" name="ad" placeholder="Ali Arda Dilek">
                         </div>
 
                         <!-- E-posta -->
                         <div class="mb-3">
                             <label for="email" class="field-label">E-posta Adresiniz</label>
-                            <input type="email" class="field-input" id="email" name="email" placeholder="ornek@mail.com"
-                                required>
+                            <input type="email" class="field-input" id="email" name="email"
+                                placeholder="ornek@mail.com">
                         </div>
 
                         <!-- Telefon -->
                         <div class="mb-3">
                             <label for="tel" class="field-label">Telefon Numaranız</label>
-                            <input type="tel" class="field-input" id="tel" name="tel" placeholder="05XX XXX XX XX"
-                                pattern="[0-9\s]+" title="Sadece rakamlar olmalıdır" required>
+                            <input type="tel" class="field-input" id="tel" name="tel" placeholder="05XX XXX XX XX">
                         </div>
 
                         <!-- Konu -->
                         <div class="mb-3">
                             <label for="konu" class="field-label">Konu</label>
-                            <select class="field-input" id="konu" name="konu" required>
+                            <select class="field-input" id="konu" name="konu">
                                 <option value="" selected disabled>Bir konu seçin...</option>
                                 <option value="Genel">Genel İletişim</option>
                                 <option value="Geri Bildirim">Geri Bildirim</option>
@@ -121,8 +120,8 @@
                         <!-- Mesaj -->
                         <div class="mb-4">
                             <label for="mesaj" class="field-label">Mesajınız</label>
-                            <textarea class="field-input" id="mesaj" name="mesaj" rows="4" placeholder="Buraya yazın..."
-                                required></textarea>
+                            <textarea class="field-input" id="mesaj" name="mesaj" rows="4"
+                                placeholder="Buraya yazın..."></textarea>
                         </div>
 
                         <!-- Butonlar -->
@@ -132,11 +131,13 @@
                             <div id="v-app">
                                 <button type="button" class="btn-vue" @click="vueCheck">Vue.js Kontrol 🟢</button>
                             </div>
-                            <button type="submit" class="btn-send">Gönder 📮</button>
-                            <button type="reset" class="btn-reset">Temizle</button>
+                            <button type="reset" class="btn-reset" onclick="temizleSonuc()">Temizle</button>
                         </div>
 
                     </form>
+
+                    <!-- Sonuç Kutusu -->
+                    <div id="sonuc" style="display:none;" class="sonuc-kutu mt-4"></div>
                 </div>
 
             </div>
