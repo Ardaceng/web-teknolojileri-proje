@@ -1,0 +1,179 @@
+/* iletisim.css */
+
+body {
+    background-color: #FAF6F0;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Navbar */
+.nav-link {
+    color: #6B4C35 !important;
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    opacity: 0.65;
+}
+
+/* Başlık */
+.page-title {
+    font-family: 'Caveat', cursive;
+    font-size: 42px;
+    color: #6B4C35;
+    margin-bottom: 6px;
+}
+
+.page-subtitle {
+    font-size: 14px;
+    color: #9e8570;
+    margin-bottom: 30px;
+}
+
+/* Form kartı */
+.form-card {
+    background: #fff;
+    border: 1px solid #ede5d8;
+    border-radius: 12px;
+    padding: 40px 36px;
+    box-shadow: 0 4px 24px rgba(107, 76, 53, 0.08);
+}
+
+/* Label */
+.field-label {
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+    color: #6B4C35;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Input, Textarea, Select */
+.field-input {
+    width: 100%;
+    border: 1px solid #e2d8cc;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 14px;
+    background-color: #fdfaf7;
+    color: #444;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    appearance: auto;
+}
+
+.field-input:focus {
+    border-color: #6B4C35;
+    box-shadow: 0 0 0 3px rgba(107, 76, 53, 0.1);
+    background: #fff;
+}
+
+/* Checkbox & Radio */
+.form-check-input:checked {
+    background-color: #6B4C35;
+    border-color: #6B4C35;
+}
+
+.form-check-label {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Butonlar */
+.btn-send {
+    background-color: #6B4C35;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 28px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-send:hover {
+    background-color: #553b2a;
+}
+
+.btn-vanilla {
+    border: 1.5px solid #6B4C35;
+    color: #6B4C35;
+    background: transparent;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-vanilla:hover {
+    background-color: #6B4C35;
+    color: #fff;
+}
+
+.btn-vue {
+    border: 1.5px solid #42b883;
+    color: #42b883;
+    background: transparent;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-vue:hover {
+    background-color: #42b883;
+    color: #fff;
+}
+
+.btn-reset {
+    border: 1.5px solid #ccc;
+    color: #777;
+    background: transparent;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-reset:hover {
+    background-color: #f0f0f0;
+}
+
+/* Sonuç Kutusu */
+.sonuc-kutu {
+    border-radius: 10px;
+    padding: 18px 22px;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.sonuc-kutu.basarili {
+    background-color: #f0faf4;
+    border: 1.5px solid #42b883;
+    color: #2d7a5e;
+}
+
+.sonuc-kutu.hata {
+    background-color: #fff5f5;
+    border: 1.5px solid #e57373;
+    color: #b33a3a;
+}
+
+.sonuc-kutu ul {
+    margin: 8px 0 0;
+    padding-left: 20px;
+}
+
+/* Footer */
+footer {
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+    color: #6B4C35;
+    background-color: #fff;
+    border-top: 1px solid #e8dcc8;
+    margin-top: 60px;
+}

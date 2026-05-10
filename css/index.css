@@ -1,0 +1,77 @@
+body {
+    background: #FAF6F0;
+    color: #333;
+    font-family: 'Inter', sans-serif;
+}
+
+nav {
+    background: #fff !important;
+    border-bottom: 1px solid #e8dcc8;
+}
+
+.nav-link {
+    color: #6B4C35 !important;
+}
+
+.polaroid {
+    background: white;
+    padding: 15px;
+    border: 1px solid #e8dcc8;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+.polaroid img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #eee;
+}
+
+.polaroid-label {
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+    color: #6B4C35;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.chip {
+    background: #fff;
+    border: 1px solid #e8dcc8;
+    border-radius: 4px;
+    padding: 4px 10px;
+    font-size: 14px;
+    color: #6B4C35;
+    display: inline-block;
+    margin: 5px;
+}
+
+.p-card {
+    background: white;
+    border: 1px solid #e8dcc8;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.p-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.p-card .p-label {
+    font-family: 'Caveat', cursive;
+    font-size: 18px;
+    color: #6B4C35;
+    text-align: center;
+    margin-top: 5px;
+}
+
+footer {
+    background: #fff;
+    border-top: 1px solid #e8dcc8;
+    padding: 20px 0;
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+    color: #6B4C35;
+}

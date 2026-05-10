@@ -1,0 +1,96 @@
+body {
+    background: #FAF6F0;
+    font-family: 'Inter', sans-serif;
+}
+
+nav {
+    background: #fff !important;
+    border-bottom: 1px solid #e8dcc8;
+}
+
+.section-title {
+    font-family: 'Caveat', cursive;
+    font-size: 28px;
+    color: #6B4C35;
+    border-bottom: 2px solid #e8dcc8;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+}
+
+.cv-card {
+    background: white;
+    padding: 20px;
+    border: 1px solid #e8dcc8;
+    margin-bottom: 15px;
+}
+
+.cv-card .cv-title {
+    font-family: 'Caveat', cursive;
+    font-size: 22px;
+    color: #2C1F14;
+    font-weight: bold;
+}
+
+.cv-card .cv-sub {
+    font-size: 14px;
+    color: #6B4C35;
+    font-weight: bold;
+}
+
+.cv-card .cv-date {
+    font-size: 13px;
+    color: #888;
+}
+
+.cv-card p {
+    font-size: 14px;
+    color: #444;
+    margin-top: 5px;
+}
+
+.chip {
+    background: white;
+    border: 1px solid #e8dcc8;
+    padding: 5px 12px;
+    font-size: 14px;
+    color: #6B4C35;
+    display: inline-block;
+    margin: 4px;
+}
+
+.polaroid {
+    background: white;
+    padding: 15px;
+    border: 1px solid #e8dcc8;
+    margin-bottom: 20px;
+}
+
+.polaroid img {
+    width: 100%;
+    height: auto;
+}
+
+.polaroid-label {
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+    color: #6B4C35;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.contact-link {
+    display: block;
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+footer {
+    background: #fff;
+    border-top: 1px solid #e8dcc8;
+    padding: 20px 0;
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+    color: #6B4C35;
+}
