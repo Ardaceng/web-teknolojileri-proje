@@ -143,6 +143,16 @@ body {
     background-color: #f0f0f0;
 }
 
+.btn-submit {
+    background-color: #6B4C35;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
 /* Sonuç Kutusu */
 .sonuc-kutu {
     border-radius: 10px;

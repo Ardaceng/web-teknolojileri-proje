@@ -46,7 +46,7 @@
                 <p class="page-subtitle text-center">Aşağıdaki formu doldurarak benimle iletişime geçebilirsiniz.</p>
 
                 <div class="form-card">
-                    <form id="contactForm" action="php/formislem.php" method="POST">
+                    <form id="contactForm" action="php/formislem.php" method="POST" onsubmit="return gonderKontrol()">
 
                         <!-- Ad Soyad -->
                         <div class="mb-3">
@@ -132,6 +132,7 @@
                                 <button type="button" class="btn-vue" @click="vueCheck">Vue.js Kontrol 🟢</button>
                             </div>
                             <button type="reset" class="btn-reset" onclick="temizleSonuc()">Temizle</button>
+                            <button type="submit" class="btn-submit">Gönder 📨</button>
                         </div>
 
                     </form>
