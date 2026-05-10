@@ -44,6 +44,26 @@ function vanillaCheck() {
     }
 }
 
+function gonderKontrol() {
+    const ad = document.getElementById('ad').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const tel = document.getElementById('tel').value.trim();
+    const konu = document.getElementById('konu').value;
+    const mesaj = document.getElementById('mesaj').value.trim();
+    const cinsiyet = document.querySelector('input[name="cinsiyet"]:checked');
+    const ilgiSecili = document.querySelectorAll('input[name="ilgi[]"]:checked');
+
+    if (!ad || !email || !tel || !konu || !mesaj || !cinsiyet || !ilgiSecili.length) {
+        const sonuc = document.getElementById('sonuc');
+        sonuc.style.display = 'block';
+        sonuc.className = 'sonuc-kutu mt-4 hata';
+        sonuc.innerHTML = '<strong>⚠️ Lütfen tüm alanları doldurun!</strong>';
+        return false; // formu gönderme
+    }
+
+    return true; // her şey dolu, gönder
+}
+
 function temizleSonuc() {
     const sonuc = document.getElementById('sonuc');
     sonuc.style.display = 'none';
